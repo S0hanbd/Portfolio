@@ -332,6 +332,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
+  transition: var(--transition);
+}
+
+.hero-subcard:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
 }
 
 .hero-subcard-title {
