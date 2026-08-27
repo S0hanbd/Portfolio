@@ -389,8 +389,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px 12px;
 }
 
 .social-icon-btn {
