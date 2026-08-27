@@ -1,412 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Sohanur Rahman Sohan — Computer Science Undergraduate & Youth Leader specializing in Software Engineering, Systems, and Community Impact.">
+  <meta name="description" content="Sohanur Rahman Sohan — Computer Science Undergraduate & Youth Leader specializing in Software Engineering, Systems, and Community Impact.">
   <title>Sohanur Rahman Sohan — Software Engineer & Systems Specialist</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- nav-->
-  <header class="site-nav">
-    <div class="nav-container">
-      <a href="#hero" class="nav-brand">Sohan.</a>
+  <!-- Floating Nav Bar -->
+  <div class="nav-wrapper">
+    <header class="site-nav">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-icon">S</span>
+        SOHAN©
+      </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+      <a href="mailto:sohanbdtech@gmail.com" class="btn btn-dark" style="padding: 8px 18px; font-size: 0.825rem;">
+        Contact Me
+      </a>
+    </header>
+  </div>
 
   <div class="container">
+    
+    <!-- Hero Bento Section (Matching Cozydiadora Layout) -->
+    <section class="hero-bento" id="hero" aria-label="Introduction">
+      
+      <!-- Left Hero Card -->
+      <div class="bento-card hero-left-card">
+        <div class="hero-intro">
+          <div>
+            <span class="badge-mint">
+              <span class="badge-dot"></span> AVAILABLE FOR WORK
+            </span>
+          </div>
 
-    <!--Intro-->
-    <section class="hero" id="hero" aria-label="Introduction">
-      <div class="hero-main">
-        <div class="hero-content">
-          <h1 class="hero-name">Sohanur Rahman Sohan</h1>
-          <h2 class="hero-role">Software Engineer &amp; Systems Specialist</h2>
-          <p class="hero-tagline">
-            Computer Science Undergraduate at University of Asia Pacific &amp; Youth Leader dedicated to engineering
-            reliable software systems, building algorithmic tools, and driving high-impact community initiatives.
+          <h1 class="hero-title">
+            Hi, I’m <br>Sohan<span class="hero-title-copyright">©</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Computer Science Undergraduate at University of Asia Pacific &amp; Youth Leader focusing on Software Engineering, Systems, and Community Impact.
           </p>
 
-          <div class="btn-group">
-            <a href="mailto:sohanbdtech@gmail.com" class="btn btn-primary">
-              Get In Touch ✉️
-            </a>
-            <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              View GitHub ↗
+          <div>
+            <a href="mailto:sohanbdtech@gmail.com" class="btn btn-dark">
+              Contact Me
             </a>
           </div>
         </div>
 
-        <div class="hero-avatar-wrapper">
-          <img src="profile.jpg" alt="Sohanur Rahman Sohan" class="hero-avatar">
+        <div class="hero-location-bar">
+          <span>📍 Tejgaon, Dhaka, Bangladesh</span>
+          <span>✉️ <a href="mailto:sohanbdtech@gmail.com" style="color:inherit; text-decoration:none;">sohanbdtech@gmail.com</a></span>
+          <span>📞 <a href="tel:+8801631272004" style="color:inherit; text-decoration:none;">+8801631272004</a></span>
         </div>
       </div>
 
-      <div class="hero-footer-meta">
-        <address class="location-contact">
-          <span>📍 Tejgaon, Dhaka, Bangladesh</span>
-          <span>✉️ <a href="mailto:sohanbdtech@gmail.com"
-              style="text-decoration:none; color:inherit;">sohanbdtech@gmail.com</a></span>
-          <span>📞 <a href="tel:+8801631272004" style="text-decoration:none; color:inherit;">+8801631272004</a></span>
-        </address>
+      <!-- Right Column Bento Grid -->
+      <div class="hero-right-grid">
+        
+        <!-- Teaser Subcard 1 -->
+        <div class="hero-subcard">
+          <h2 class="hero-subcard-title">DSA Visualizer</h2>
+          <p class="hero-subcard-desc">Interactive frontend simulation lab for algorithms and data structure states.</p>
+          <span class="badge-mint" style="font-size:0.65rem; padding:3px 8px; align-self:flex-start;">Live Simulation</span>
+        </div>
 
-        <nav aria-label="Developer Profile Links" class="social-links">
-          <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub
-            ↗</a>
-          <a href="https://www.linkedin.com/in/sohanur-rahman-6239952b6/" target="_blank" rel="noopener noreferrer"
-            class="social-pill">LinkedIn ↗</a>
-          <a href="https://leetcode.com/u/S0hanbd" target="_blank" rel="noopener noreferrer"
-            class="social-pill">LeetCode ↗</a>
-          <a href="https://www.hackerrank.com/profile/Sohanbd" target="_blank" rel="noopener noreferrer"
-            class="social-pill">HackerRank ↗</a>
-          <a href="https://www.facebook.com/sohan.fidato" target="_blank" rel="noopener noreferrer"
-            class="social-pill">Facebook ↗</a>
-        </nav>
+        <!-- Avatar Photo Subcard 2 -->
+        <div class="hero-avatar-card">
+          <img src="profile.jpg" alt="Sohanur Rahman Sohan" class="hero-avatar-img">
+        </div>
+
+        <!-- Violet Accent Subcard 3 -->
+        <div class="hero-accent-card">
+          <span style="font-size:0.75rem; opacity:0.85; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Academics &amp; Systems</span>
+          <p class="hero-accent-text">B.Sc in Computer Science &amp; Engineering <br><strong>CGPA: 3.93 / 4.00</strong></p>
+        </div>
+
+        <!-- Social Icons Grid Subcard 4 -->
+        <div class="hero-social-card">
+          <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/sohanur-rahman-6239952b6/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">IN</a>
+          <a href="https://leetcode.com/u/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LeetCode">LC</a>
+          <a href="https://www.hackerrank.com/profile/Sohanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="HackerRank">HR</a>
+          <a href="https://www.facebook.com/sohan.fidato" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook">FB</a>
+        </div>
+
       </div>
     </section>
 
-    <!-- Main Content -->
-    <main style="display:flex; flex-direction:column; gap:64px;">
-
-      <!-- Featured Projects -->
+    <!-- Main Sections -->
+    <main style="display:flex; flex-direction:column; gap:40px;">
+      
+      <!-- Featured Projects Section -->
       <section id="projects" aria-labelledby="heading-projects">
-        <div class="section-header">
-          <h2 id="heading-projects" class="section-title">Featured Engineering Projects</h2>
+        <div class="section-header-card" style="margin-bottom:24px;">
+          <h2 id="heading-projects" class="section-heading">Wanna see my projects?</h2>
+          <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile ↗</a>
         </div>
 
-        <div class="projects-grid">
-
-          <article class="project-card">
-            <a href="https://dsa-visualizer-khaki-two.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="project-image-link">
-              <img src="dsa-visualizer-preview.png" alt="DSA Visualizer Live Interactive Preview"
-                class="project-preview-img">
-            </a>
-
+        <div class="projects-bento-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-bento-card">
+            <div class="project-image-box">
+              <a href="https://dsa-visualizer-khaki-two.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="dsa-visualizer-preview.png" alt="DSA Visualizer Live Preview" class="project-img">
+              </a>
+            </div>
+            
             <h3 class="project-title">DSA Visualizer</h3>
-            <p class="project-description">
-              Interactive data structures and algorithms visualization tool engineered to demonstrate complex
-              algorithmic executions, memory state changes, and time complexity behaviors in real-time.
+            <p class="project-desc">
+              Interactive data structures and algorithms visualization tool engineered to demonstrate complex algorithmic executions, memory state changes, and time complexity behaviors in real-time.
             </p>
 
-            <div class="project-tech-stack">
-              <span class="tech-tag">Data Structures</span>
-              <span class="tech-tag">Algorithms</span>
-              <span class="tech-tag">Interactive Simulation</span>
-              <span class="tech-tag">Problem Solving</span>
+            <div class="tech-pills">
+              <span class="tech-pill">Data Structures</span>
+              <span class="tech-pill">Algorithms</span>
+              <span class="tech-pill">Interactive Simulation</span>
+              <span class="tech-pill">C++ / JS</span>
             </div>
 
-            <div class="project-action" style="display:flex; gap:10px; flex-wrap:wrap;">
-              <a href="https://dsa-visualizer-khaki-two.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary" style="font-size:0.825rem; padding:6px 14px;">
-                Live Preview ↗
+            <div class="project-btn-row">
+              <a href="https://dsa-visualizer-khaki-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+                Live Demo ↗
               </a>
-              <a href="https://github.com/S0hanbd/DSA_Visualizer-" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary" style="font-size:0.825rem; padding:6px 14px;">
+              <a href="https://github.com/S0hanbd/DSA_Visualizer-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-bento-card">
+            <div style="background:var(--surface-alt); border-radius:var(--radius-md); padding:40px 24px; text-align:center; border:1px solid var(--border);">
+              <span style="font-size:2.5rem;">☕</span>
+              <h4 style="font-size:1.1rem; margin-top:8px; font-weight:700;">Desktop Java Engine</h4>
+            </div>
+
+            <h3 class="project-title">Library Management System</h3>
+            <p class="project-desc">
+              Object-oriented desktop management system engineered in Java for automating catalog management, book lending workflows, inventory indexing, and record auditing.
+            </p>
+
+            <div class="tech-pills">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">OOP Architecture</span>
+              <span class="tech-pill">Desktop Software</span>
+              <span class="tech-pill">Records Indexing</span>
+            </div>
+
+            <div class="project-btn-row">
+              <a href="https://github.com/S0hanbd/Java_Learning_-_Projejct" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
                 GitHub Repo ↗
               </a>
             </div>
           </article>
 
-          <article class="project-card">
-            <h3 class="project-title">Library Management System</h3>
-            <p class="project-description">
-              Object-oriented desktop management system engineered in Java for automating catalog management, book
-              lending workflows, inventory indexing, and record auditing.
-            </p>
-
-            <div class="project-tech-stack">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">OOP Architecture</span>
-              <span class="tech-tag">Desktop Software</span>
-              <span class="tech-tag">Record Systems</span>
-            </div>
-
-            <div class="project-action">
-              <a href="https://github.com/S0hanbd/Java_Learning_-_Projejct" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary" style="font-size:0.825rem; padding:6px 14px;">
-                Explore Repository ↗
-              </a>
-            </div>
-          </article>
-
         </div>
       </section>
 
-      <!-- Experience & Leadership -->
+      <!-- Experience Section -->
       <section id="experience" aria-labelledby="heading-experience">
-        <div class="section-header">
-          <h2 id="heading-experience" class="section-title">Leadership &amp; Organizational Impact</h2>
+        <div class="section-header-card" style="margin-bottom:24px;">
+          <h2 id="heading-experience" class="section-heading">Wanna see my experience?</h2>
         </div>
 
-        <div class="experience-list">
-
-          <article class="experience-card">
-            <header class="exp-header">
+        <div class="experience-bento-grid">
+          
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">SHBO — Youth NGO</h3>
-                <p class="exp-role">Vice President &amp; IT Secretary</p>
+                <h3 class="exp-company">SHBO — Youth NGO</h3>
+                <p class="exp-role-title">Vice President &amp; IT Secretary</p>
               </div>
-              <time class="exp-time">June 2021 – Present</time>
-            </header>
-            <ul class="exp-bullets">
-              <li>Grew SHBO from a local initiative into an internationally recognized youth organization through
-                strategic multi-national partnerships.</li>
-              <li>Directed crisis response operations mobilizing <strong>60 Lakh BDT</strong> in relief aid, delivering
-                <strong>24,000+ emergency meals</strong>, and rescuing <strong>50+ stranded families</strong> during the
-                2024 floods.</li>
-              <li>Spearheaded climate justice campaigns, global climate strikes, and youth policy consultations.</li>
-              <li>Partnered with <strong>3 government hospitals</strong> for women-friendly medical facilities and
-                trained <strong>200+ female students</strong> in self-defense.</li>
+              <span class="exp-date-pill">June 2021 – Present</span>
+            </div>
+            <ul class="exp-bullet-list">
+              <li>Grew SHBO from a local initiative into an internationally recognized youth organization through strategic partnerships.</li>
+              <li>Directed crisis response operations mobilizing <strong>60 Lakh BDT</strong> in aid, delivering <strong>24,000+ emergency meals</strong>, and rescuing <strong>50+ stranded families</strong> during the 2024 floods.</li>
+              <li>Spearheaded climate justice campaigns, global climate strikes, and policy consultations.</li>
+              <li>Partnered with <strong>3 government hospitals</strong> for women-friendly medical facilities and trained <strong>200+ female students</strong> in self-defense.</li>
             </ul>
           </article>
 
-          <article class="experience-card">
-            <header class="exp-header">
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">TEDx University of Asia Pacific</h3>
-                <p class="exp-role">Head of Hospitality</p>
+                <h3 class="exp-company">TEDx University of Asia Pacific</h3>
+                <p class="exp-role-title">Head of Hospitality</p>
               </div>
-              <time class="exp-time">Event Leadership</time>
-            </header>
-            <ul class="exp-bullets">
-              <li>Managed end-to-end hospitality, speaker reception, and executive logistics for a flagship
-                <strong>11.5-hour</strong> conference.</li>
-              <li>Hosted <strong>9 distinguished speakers</strong>, <strong>3 live musical bands</strong>, and
-                coordinated with <strong>23 corporate sponsors</strong> (including Pubali Bank).</li>
-              <li>Orchestrated operations for an audience of <strong>300+ university students, faculty, and VIP
-                  guests</strong>.</li>
+              <span class="exp-date-pill">Event Leadership</span>
+            </div>
+            <ul class="exp-bullet-list">
+              <li>Managed end-to-end hospitality, speaker reception, and executive logistics for a flagship <strong>11.5-hour</strong> conference.</li>
+              <li>Hosted <strong>9 distinguished speakers</strong>, <strong>3 live musical bands</strong>, and coordinated with <strong>23 corporate sponsors</strong> (including Pubali Bank).</li>
+              <li>Orchestrated operations for an audience of <strong>300+ university students, faculty, and VIP guests</strong>.</li>
             </ul>
           </article>
 
-          <article class="experience-card">
-            <header class="exp-header">
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">Software And Hardware Club, CSE, UAP</h3>
-                <p class="exp-role">Media &amp; Publication Executive</p>
+                <h3 class="exp-company">Software And Hardware Club, CSE, UAP</h3>
+                <p class="exp-role-title">Media &amp; Publication Executive</p>
               </div>
-              <time class="exp-time">Feb 2026</time>
-            </header>
-            <ul class="exp-bullets">
-              <li>Partnered with <strong>Google Developer Group Dhaka</strong> to host technical workshops on Google
-                Cloud &amp; AI technologies.</li>
-              <li>Managed public relations for the DevFest web development course and coordinated logistics for the
-                <strong>DevFusion Hackathon</strong>.</li>
+              <span class="exp-date-pill">Feb 2026</span>
+            </div>
+            <ul class="exp-bullet-list">
+              <li>Partnered with <strong>Google Developer Group Dhaka</strong> to host technical workshops on Google Cloud &amp; AI technologies.</li>
+              <li>Managed public relations for the DevFest web development course and coordinated logistics for the <strong>DevFusion Hackathon</strong>.</li>
             </ul>
           </article>
 
-          <article class="experience-card">
-            <header class="exp-header">
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">Entrepreneurship and Career Development Club, DSW, UAP</h3>
-                <p class="exp-role">Executive Member</p>
+                <h3 class="exp-company">Entrepreneurship &amp; Career Development Club, DSW, UAP</h3>
+                <p class="exp-role-title">Executive Member</p>
               </div>
-              <time class="exp-time">Sept 2024</time>
-            </header>
-            <ul class="exp-bullets">
-              <li>Organized nationwide multi-stage venture startup competitions <strong>'IDEA Season 4'</strong> and
-                <strong>'IDEA Season 5'</strong>.</li>
-              <li>Orchestrated the high-profile <strong>"Meet the CEO"</strong> executive seminar series featuring
-                corporate leaders.</li>
+              <span class="exp-date-pill">Sept 2024</span>
+            </div>
+            <ul class="exp-bullet-list">
+              <li>Organized nationwide multi-stage venture startup competitions <strong>'IDEA Season 4'</strong> and <strong>'IDEA Season 5'</strong>.</li>
+              <li>Orchestrated the high-profile <strong>"Meet the CEO"</strong> executive seminar series featuring corporate leaders.</li>
             </ul>
           </article>
 
-          <article class="experience-card">
-            <header class="exp-header">
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">AKHS Science Club</h3>
-                <p class="exp-role">Founder &amp; Chairman</p>
+                <h3 class="exp-company">AKHS Science Club</h3>
+                <p class="exp-role-title">Founder &amp; Chairman</p>
               </div>
-              <time class="exp-time">2018 – 2021</time>
-            </header>
-            <ul class="exp-bullets">
-              <li>Founded the science organization and guided the student research team to <strong>3 consecutive science
-                  fair wins</strong> and <strong>3rd place</strong> at the divisional level.</li>
+              <span class="exp-date-pill">2018 – 2021</span>
+            </div>
+            <ul class="exp-bullet-list">
+              <li>Founded the science organization and guided the student research team to <strong>3 consecutive science fair wins</strong> and <strong>3rd place</strong> at the divisional level.</li>
             </ul>
           </article>
 
-          <article class="experience-card">
-            <header class="exp-header">
+          <article class="exp-bento-card">
+            <div class="exp-top-row">
               <div>
-                <h3 class="exp-org">AKHS Scout Team &amp; KRDC Rover Team</h3>
-                <p class="exp-role">Scout Leader &amp; Senior Rover Mate</p>
+                <h3 class="exp-company">AKHS Scout Team &amp; KRDC Rover Team</h3>
+                <p class="exp-role-title">Scout Leader &amp; Senior Rover Mate</p>
               </div>
-              <time class="exp-time">2019 – 2023</time>
-            </header>
+              <span class="exp-date-pill">2019 – 2023</span>
+            </div>
           </article>
 
         </div>
       </section>
 
-      <!-- Technical Skills -->
+      <!-- Technical Toolkit Section -->
       <section id="skills" aria-labelledby="heading-skills">
-        <div class="section-header">
-          <h2 id="heading-skills" class="section-title">Technical Capabilities &amp; Toolkit</h2>
+        <div class="section-header-card" style="margin-bottom:24px;">
+          <h2 id="heading-skills" class="section-heading">Skills &amp; Capabilities</h2>
         </div>
 
-        <div class="skills-grid">
-
-          <div class="skill-card">
-            <h3 class="skill-label">Programming Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-pill">C</span>
-              <span class="skill-pill">C++</span>
-              <span class="skill-pill">Java</span>
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">SQL</span>
-              <span class="skill-pill">HTML5</span>
-              <span class="skill-pill">CSS3</span>
+        <div class="skills-bento-grid">
+          
+          <div class="skill-bento-card">
+            <h3 class="skill-card-heading">Languages</h3>
+            <div class="skill-pill-cloud">
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">C++</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3 class="skill-label">Core Engineering Knowledge</h3>
-            <div class="skill-tags">
-              <span class="skill-pill">Data Structures &amp; Algorithms</span>
-              <span class="skill-pill">Object-Oriented Programming (OOP)</span>
-              <span class="skill-pill">Database Management Systems (DBMS)</span>
-              <span class="skill-pill">Software Architecture</span>
+          <div class="skill-bento-card">
+            <h3 class="skill-card-heading">Core Engineering</h3>
+            <div class="skill-pill-cloud">
+              <span class="skill-chip">Data Structures</span>
+              <span class="skill-chip">Algorithms</span>
+              <span class="skill-chip">OOP</span>
+              <span class="skill-chip">DBMS</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3 class="skill-label">Tools &amp; Workflow</h3>
-            <div class="skill-tags">
-              <span class="skill-pill">Git / GitHub</span>
-              <span class="skill-pill">Notion Workflows</span>
-              <span class="skill-pill">MS Office</span>
-              <span class="skill-pill">UI/UX Interface Design</span>
+          <div class="skill-bento-card">
+            <h3 class="skill-card-heading">Tools &amp; Workflow</h3>
+            <div class="skill-pill-cloud">
+              <span class="skill-chip">Git / GitHub</span>
+              <span class="skill-chip">Notion Workflows</span>
+              <span class="skill-chip">MS Office</span>
+              <span class="skill-chip">UI/UX Design</span>
             </div>
           </div>
 
-          <div class="skill-card">
-            <h3 class="skill-label">Leadership &amp; Operations</h3>
-            <div class="skill-tags">
-              <span class="skill-pill">Project Management</span>
-              <span class="skill-pill">Event Marketing</span>
-              <span class="skill-pill">Crisis Response Logistics</span>
-              <span class="skill-pill">Team Operations</span>
+          <div class="skill-bento-card">
+            <h3 class="skill-card-heading">Leadership</h3>
+            <div class="skill-pill-cloud">
+              <span class="skill-chip">Project Management</span>
+              <span class="skill-chip">Event Marketing</span>
+              <span class="skill-chip">Crisis Logistics</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- Education -->
+      <!-- Education & Honors Section -->
       <section id="education" aria-labelledby="heading-education">
-        <div class="section-header">
-          <h2 id="heading-education" class="section-title">Academic Background</h2>
+        <div class="section-header-card" style="margin-bottom:24px;">
+          <h2 id="heading-education" class="section-heading">Education &amp; Honors</h2>
         </div>
 
-        <div class="education-grid">
+        <div class="two-col-bento">
+          
+          <!-- Education Column -->
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <article class="edu-bento-card">
+              <div>
+                <h3 class="edu-inst">University of Asia Pacific — Dhaka</h3>
+                <p class="edu-degree">B.Sc in Computer Science &amp; Engineering</p>
+                <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">July 2024 – Present (2nd Year, 2nd Sem)</span>
+              </div>
+              <span class="cgpa-pill">CGPA: 3.93 / 4.00</span>
+            </article>
 
-          <article class="edu-card">
-            <div class="edu-info">
-              <h3 class="edu-institution">University of Asia Pacific — Dhaka</h3>
-              <p class="edu-degree">Bachelor of Science in Computer Science &amp; Engineering</p>
-              <span style="font-size:0.85rem; color:var(--text-muted); margin-top:2px;">Academic Standing: 2nd Year, 2nd
-                Semester</span>
+            <article class="edu-bento-card">
+              <div>
+                <h3 class="edu-inst">Khalilur Rahman Degree College</h3>
+                <p class="edu-degree">Higher Secondary Certificate (HSC)</p>
+                <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">Passed: February 2023</span>
+              </div>
+              <span class="cgpa-pill">GPA: 4.25 / 5.00</span>
+            </article>
+          </div>
+
+          <!-- Awards Column -->
+          <div class="awards-bento-list">
+            <div class="award-row-card">
+              <span class="award-index">01</span>
+              <span class="award-name">Vice Chancellor's Award for Academic Excellence (UAP)</span>
             </div>
-            <div class="edu-meta">
-              <span class="cgpa-highlight">CGPA: 3.93 / 4.00</span>
-              <span class="edu-date">July 2024 – Present</span>
+            <div class="award-row-card">
+              <span class="award-index">02</span>
+              <span class="award-name">Dean's Award for Academic Excellence (UAP)</span>
             </div>
-          </article>
-
-          <article class="edu-card">
-            <div class="edu-info">
-              <h3 class="edu-institution">Khalilur Rahman Degree College — Noakhali</h3>
-              <p class="edu-degree">Higher Secondary Certificate (HSC)</p>
+            <div class="award-row-card">
+              <span class="award-index">03</span>
+              <span class="award-name">1st Runner-Up, IDEA Season 4.0 (Out of 40 ideas)</span>
             </div>
-            <div class="edu-meta">
-              <span class="cgpa-highlight">GPA: 4.25 / 5.00</span>
-              <span class="edu-date">Passed: Feb 2023</span>
+            <div class="award-row-card">
+              <span class="award-index">04</span>
+              <span class="award-name">1st Runner-Up, Ideathon (Out of 50 ideas)</span>
             </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- Honors & Awards -->
-      <section id="awards" aria-labelledby="heading-awards">
-        <div class="section-header">
-          <h2 id="heading-awards" class="section-title">Honors, Competitions &amp; Awards</h2>
-        </div>
-
-        <div class="awards-grid">
-
-          <div class="award-card">
-            <span class="award-num">01</span>
-            <span class="award-title">Vice Chancellor's Award for Academic Excellence (2nd &amp; 3rd Sem, UAP)</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">02</span>
-            <span class="award-title">Dean's Award for Academic Excellence (1st Sem, UAP)</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">03</span>
-            <span class="award-title">1st Runner-Up, IDEA Season 4.0 (Out of 40 business ventures)</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">04</span>
-            <span class="award-title">1st Runner-Up, Ideathon (Out of 50 business ventures)</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">05</span>
-            <span class="award-title">2nd Runner-Up, FlowTank Bangladesh (Out of 75 business ideas)</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">06</span>
-            <span class="award-title">1st Prize (3 Consecutive Years), Regional Science Fair</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">07</span>
-            <span class="award-title">Best Volunteer Award, SHBO Youth NGO</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">08</span>
-            <span class="award-title">Runners-Up, Sonaimuri Upazila Chess Championship</span>
-          </div>
-
-          <div class="award-card">
-            <span class="award-num">09</span>
-            <span class="award-title">2nd Runner-Up, English Speech Competition (Noakhali Zila)</span>
+            <div class="award-row-card">
+              <span class="award-index">05</span>
+              <span class="award-name">2nd Runner-Up, FlowTank Bangladesh (Out of 75 ideas)</span>
+            </div>
+            <div class="award-row-card">
+              <span class="award-index">06</span>
+              <span class="award-name">1st Prize (3 Consecutive Years), Regional Science Fair</span>
+            </div>
+            <div class="award-row-card">
+              <span class="award-index">07</span>
+              <span class="award-name">Best Volunteer Award, SHBO Youth NGO</span>
+            </div>
           </div>
 
         </div>
       </section>
 
-      <!-- Contact Banner / Call To Action -->
+      <!-- Contact Banner -->
       <section id="contact" aria-label="Contact Section">
-        <div class="contact-cta-card">
-          <h2 class="cta-heading">Let's connect &amp; build impactful systems.</h2>
-          <p class="cta-text">
-            I am currently open to software engineering internships, technical collaborations, and research
-            opportunities. Feel free to reach out directly via email.
+        <div class="contact-bento-card">
+          <h2 class="contact-bento-title">Let's connect and build together.</h2>
+          <p class="contact-bento-text">
+            Open for software engineering internships, technical projects, and research opportunities. Reach out via email anytime.
           </p>
-          <a href="mailto:sohanbdtech@gmail.com" class="btn btn-primary"
-            style="padding: 12px 24px; font-size: 0.95rem;">
+          <a href="mailto:sohanbdtech@gmail.com" class="btn btn-dark" style="padding: 14px 28px; font-size: 0.95rem;">
             Send Email Message ✉️
           </a>
         </div>
@@ -416,12 +397,11 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>&copy; Sohanur Rahman Sohan. Engineered with HTML5 &amp; Vanilla CSS.</p>
-      <a href="#hero" class="back-to-top">Back to top ↑</a>
+      <p>&copy; Sohanur Rahman Sohan. Designed with Bento UI &amp; Vanilla CSS.</p>
+      <a href="#hero" class="back-top-link">Back to top ↑</a>
     </footer>
 
   </div>
 
 </body>
-
 </html>
