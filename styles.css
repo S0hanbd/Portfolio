@@ -394,8 +394,8 @@ body {
 }
 
 .social-icon-btn {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background-color: var(--surface-alt);
   border: 1px solid var(--border);
@@ -404,8 +404,7 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   transition: var(--transition);
 }
 
@@ -413,6 +412,7 @@ body {
   background-color: var(--pill-dark);
   color: var(--pill-text);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* Location & Meta Bar inside Hero */
