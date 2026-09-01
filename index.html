@@ -24,6 +24,7 @@
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#honors" class="nav-link">Honors &amp; Awards</a></li>
         </ul>
       </nav>
       <a href="mailto:sohanbdtech@gmail.com" class="btn btn-dark" style="padding: 8px 18px; font-size: 0.825rem;">
@@ -80,7 +81,7 @@
 
         <!-- Avatar Photo Subcard 2 -->
         <div class="hero-avatar-card">
-          <img src="profile.jpg" alt="Sohanur Rahman Sohan" class="hero-avatar-img">
+          <img src="images/profile.jpg" alt="Sohanur Rahman Sohan" class="hero-avatar-img">
         </div>
 
         <!-- Violet Accent Subcard 3 -->
@@ -129,8 +130,8 @@
           <!-- Project 1: Bloodstream -->
           <article class="project-bento-card">
             <div class="project-image-box">
-              <a href="https://bloodstream-eight.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <img src="bloodstream-preview.png" alt="Bloodstream UAP Blood Bank Live Preview" class="project-img">
+              <a href="https://bloodstream-blueprint.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="images/bloodstream-preview.png" alt="Bloodstream UAP Blood Bank Live Preview" class="project-img">
               </a>
             </div>
             
@@ -148,7 +149,7 @@
             </div>
 
             <div class="project-btn-row">
-              <a href="https://bloodstream-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              <a href="https://bloodstream-blueprint.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
                 Live Demo ↗
               </a>
               <a href="https://github.com/S0hanbd/bloodstream-blueprint" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
@@ -161,7 +162,7 @@
           <article class="project-bento-card">
             <div class="project-image-box">
               <a href="https://dsa-visualizer-khaki-two.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <img src="dsa-visualizer-preview.png" alt="DSA Visualizer Live Preview" class="project-img">
+                <img src="images/dsa-visualizer-preview.png" alt="DSA Visualizer Live Preview" class="project-img">
               </a>
             </div>
             
@@ -232,6 +233,14 @@
               </div>
               <span class="exp-date-pill">June 2021 – Present</span>
             </div>
+            
+            <div class="exp-card-media" onclick="openLightbox('images/experiences/SHBO youth NGO.jpg', 'SHBO Youth NGO — Executive Leadership &amp; Flood Relief Operations')">
+              <img src="images/experiences/SHBO youth NGO.jpg" alt="SHBO Youth NGO Executive Leadership" class="exp-card-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Full Image
+              </div>
+            </div>
+
             <ul class="exp-bullet-list">
               <li>Grew SHBO from a local initiative into an internationally recognized youth organization through strategic partnerships.</li>
               <li>Directed crisis response operations mobilizing <strong>60 Lakh BDT</strong> in aid, delivering <strong>24,000+ emergency meals</strong>, and rescuing <strong>50+ stranded families</strong> during the 2024 floods.</li>
@@ -248,6 +257,14 @@
               </div>
               <span class="exp-date-pill">Event Leadership</span>
             </div>
+
+            <div class="exp-card-media" onclick="openLightbox('images/experiences/TEDx UAP head of hospitility.jpeg', 'TEDx UAP — Head of Hospitality Certificate of Leadership')">
+              <img src="images/experiences/TEDx UAP head of hospitility.jpeg" alt="TEDx UAP Head of Hospitality Certificate" class="exp-card-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
+            </div>
+
             <ul class="exp-bullet-list">
               <li>Managed end-to-end hospitality, speaker reception, and executive logistics for a flagship <strong>11.5-hour</strong> conference.</li>
               <li>Hosted <strong>9 distinguished speakers</strong>, <strong>3 live musical bands</strong>, and coordinated with <strong>23 corporate sponsors</strong> (including Pubali Bank).</li>
@@ -362,66 +379,152 @@
         </div>
       </section>
 
-      <!-- Education & Honors Section -->
+      <!-- Education Section -->
       <section id="education" aria-labelledby="heading-education">
         <div class="section-header-card" style="margin-bottom:24px;">
-          <h2 id="heading-education" class="section-heading">Education &amp; Honors</h2>
+          <h2 id="heading-education" class="section-heading">Education</h2>
         </div>
 
-        <div class="two-col-bento">
+        <div class="edu-grid">
+          <article class="edu-bento-card">
+            <div>
+              <h3 class="edu-inst">University of Asia Pacific — Dhaka</h3>
+              <p class="edu-degree">B.Sc in Computer Science &amp; Engineering</p>
+              <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">July 2024 – Present (2nd Year, 2nd Sem)</span>
+            </div>
+            <span class="cgpa-pill">CGPA: 3.93 / 4.00</span>
+          </article>
+
+          <article class="edu-bento-card">
+            <div>
+              <h3 class="edu-inst">Khalilur Rahman Degree College</h3>
+              <p class="edu-degree">Higher Secondary Certificate (HSC)</p>
+              <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">Passed: February 2023</span>
+            </div>
+            <span class="cgpa-pill">GPA: 4.25 / 5.00</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Honors & Awards Section -->
+      <section id="honors" aria-labelledby="heading-honors" style="margin-top: 48px;">
+        <div class="section-header-card" style="margin-bottom:24px;">
+          <h2 id="heading-honors" class="section-heading">Honors &amp; Awards</h2>
+        </div>
+
+        <div class="awards-grid">
           
-          <!-- Education Column -->
-          <div style="display:flex; flex-direction:column; gap:20px;">
-            <article class="edu-bento-card">
-              <div>
-                <h3 class="edu-inst">University of Asia Pacific — Dhaka</h3>
-                <p class="edu-degree">B.Sc in Computer Science &amp; Engineering</p>
-                <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">July 2024 – Present (2nd Year, 2nd Sem)</span>
+          <!-- Award 1 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">01</span>
               </div>
-              <span class="cgpa-pill">CGPA: 3.93 / 4.00</span>
-            </article>
-
-            <article class="edu-bento-card">
-              <div>
-                <h3 class="edu-inst">Khalilur Rahman Degree College</h3>
-                <p class="edu-degree">Higher Secondary Certificate (HSC)</p>
-                <span style="font-size:0.85rem; color:var(--text-muted); display:block; margin-top:4px;">Passed: February 2023</span>
+              <h3 class="award-name">Vice Chancellor's Award for Academic Excellence (UAP)</h3>
+            </div>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/VC award.jpg', 'Vice Chancellor\'s Award for Academic Excellence — University of Asia Pacific')">
+              <img src="images/achievements/VC award.jpg" alt="Vice Chancellor's Award Certificate" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
               </div>
-              <span class="cgpa-pill">GPA: 4.25 / 5.00</span>
-            </article>
-          </div>
+            </div>
+          </article>
 
-          <!-- Awards Column -->
-          <div class="awards-bento-list">
-            <div class="award-row-card">
-              <span class="award-index">01</span>
-              <span class="award-name">Vice Chancellor's Award for Academic Excellence (UAP)</span>
+          <!-- Award 2 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">02</span>
+              </div>
+              <h3 class="award-name">Dean's Award for Academic Excellence (UAP)</h3>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">02</span>
-              <span class="award-name">Dean's Award for Academic Excellence (UAP)</span>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/Deans award.jpg', 'Dean\'s Award for Academic Excellence — University of Asia Pacific')">
+              <img src="images/achievements/Deans award.jpg" alt="Dean's Award Certificate" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">03</span>
-              <span class="award-name">1st Runner-Up, IDEA Season 4.0 (Out of 40 ideas)</span>
+          </article>
+
+          <!-- Award 3 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">03</span>
+              </div>
+              <h3 class="award-name">1st Runner-Up, IDEA Season 4.0 (Out of 40 ideas)</h3>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">04</span>
-              <span class="award-name">1st Runner-Up, Ideathon (Out of 50 ideas)</span>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/Ideation 4.0 Runners up.jpg', '1st Runner-Up — IDEA Season 4.0 National Venture Competition')">
+              <img src="images/achievements/Ideation 4.0 Runners up.jpg" alt="1st Runner-Up IDEA Season 4.0 Certificate" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">05</span>
-              <span class="award-name">2nd Runner-Up, FlowTank Bangladesh (Out of 75 ideas)</span>
+          </article>
+
+          <!-- Award 4 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">04</span>
+              </div>
+              <h3 class="award-name">1st Runner-Up, Ideathon (Out of 50 ideas)</h3>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">06</span>
-              <span class="award-name">1st Prize (3 Consecutive Years), Regional Science Fair</span>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/Ideathon award.jpg', '1st Runner-Up — Ideathon Hackathon &amp; Innovation Competition')">
+              <img src="images/achievements/Ideathon award.jpg" alt="1st Runner-Up Ideathon Certificate" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
             </div>
-            <div class="award-row-card">
-              <span class="award-index">07</span>
-              <span class="award-name">Best Volunteer Award, SHBO Youth NGO</span>
+          </article>
+
+          <!-- Award 5 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">05</span>
+              </div>
+              <h3 class="award-name">2nd Runner-Up, FlowTank Bangladesh (Out of 75 ideas)</h3>
             </div>
-          </div>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/FlowTank award.jpg', '2nd Runner-Up — FlowTank Bangladesh Venture Summit')">
+              <img src="images/achievements/FlowTank award.jpg" alt="2nd Runner-Up FlowTank Award" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
+            </div>
+          </article>
+
+          <!-- Award 6 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">06</span>
+              </div>
+              <h3 class="award-name">1st Prize (3 Consecutive Years), Regional Science Fair</h3>
+            </div>
+            <div class="award-img-box" onclick="openLightbox('images/achievements/Science Fair award.jpg', '1st Prize (3 Consecutive Years) — Regional Science Fair')">
+              <img src="images/achievements/Science Fair award.jpg" alt="1st Prize Regional Science Fair Award" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Certificate
+              </div>
+            </div>
+          </article>
+
+          <!-- Award 7 -->
+          <article class="award-card">
+            <div class="award-card-header">
+              <div class="award-meta-row">
+                <span class="award-index">07</span>
+              </div>
+              <h3 class="award-name">Best Volunteer Award, SHBO Youth NGO</h3>
+            </div>
+            <div class="award-img-box" onclick="openLightbox('images/experiences/SHBO youth NGO.jpg', 'Best Volunteer Award — SHBO Youth NGO')">
+              <img src="images/experiences/SHBO youth NGO.jpg" alt="Best Volunteer Award SHBO Youth NGO" class="award-img" loading="lazy">
+              <div class="media-hover-overlay">
+                <i class="fa-solid fa-expand"></i> View Photo
+              </div>
+            </div>
+          </article>
 
         </div>
       </section>
@@ -448,6 +551,46 @@
     </footer>
 
   </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close Preview">&times;</button>
+    <div class="lightbox-img-wrapper">
+      <img id="lightbox-img" src="" alt="Certificate Preview" class="lightbox-img">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const captionText = document.getElementById('lightbox-caption');
+      img.src = src;
+      img.alt = caption;
+      captionText.textContent = caption;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close') || e.target.tagName === 'BUTTON') {
+        const modal = document.getElementById('lightbox');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightbox');
+        if (modal && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>

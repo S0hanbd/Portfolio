@@ -20,8 +20,8 @@
   --pill-dark-hover: #262626;
   --pill-text: #ffffff;
   
-  --mint-bg: #dcfce7;
-  --mint-text: #0f766e;
+  --mint-bg: #f3f4f6;
+  --mint-text: #374151;
 
   --accent-box-bg: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #4f46e5 100%);
   --accent-box-text: #ffffff;
@@ -55,8 +55,8 @@
     --pill-dark-hover: #e5e7eb;
     --pill-text: #09090b;
 
-    --mint-bg: #064e3b;
-    --mint-text: #6ee7b7;
+    --mint-bg: #27272a;
+    --mint-text: #e4e4e7;
 
     --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.5);
@@ -667,11 +667,11 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   10. Bento Education & Awards Grid
+   10. Bento Education & Awards Grids
    -------------------------------------------------------------------------- */
-.two-col-bento {
+.edu-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
@@ -685,6 +685,13 @@ body {
   justify-content: space-between;
   gap: 16px;
   box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.edu-bento-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
 }
 
 .edu-inst {
@@ -708,34 +715,83 @@ body {
   align-self: flex-start;
 }
 
-.awards-bento-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
-.award-row-card {
+.award-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px 20px;
+  border-radius: var(--radius-xl);
+  padding: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 16px;
   box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.award-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+}
+
+.award-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.award-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .award-index {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-muted);
 }
 
 .award-name {
-  font-size: 0.925rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.award-img-box {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background-color: var(--surface-alt);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: var(--transition);
+}
+
+.award-img-box:hover .award-img {
+  transform: scale(1.03);
+}
+
+.award-img-box:hover .media-hover-overlay {
+  opacity: 1;
 }
 
 /* --------------------------------------------------------------------------
@@ -890,4 +946,180 @@ body {
 
 .gallery-card:hover .gallery-img {
   transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   14. Experience & Achievement Image Cards & Lightbox Modal
+   -------------------------------------------------------------------------- */
+.exp-card-media,
+.achievement-card-media {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background-color: var(--surface-alt);
+  position: relative;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.exp-card-img,
+.achievement-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.exp-card-media:hover .exp-card-img,
+.achievement-card-media:hover .achievement-card-img {
+  transform: scale(1.03);
+}
+
+.media-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: var(--transition);
+  backdrop-filter: blur(2px);
+}
+
+.exp-card-media:hover .media-hover-overlay,
+.achievement-card-media:hover .media-hover-overlay {
+  opacity: 1;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.achievement-bento-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.achievement-bento-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.achievement-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.achievement-badge {
+  font-size: 0.725rem;
+  font-family: var(--font-mono);
+  background-color: var(--mint-bg);
+  color: var(--mint-text);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 24px;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img-wrapper {
+  max-width: 90vw;
+  max-height: 84vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 76vh;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.lightbox-caption {
+  color: #ffffff;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: var(--font-sans);
+  background: rgba(0,0,0,0.5);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.1);
 }
