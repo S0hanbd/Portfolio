@@ -84,7 +84,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Navigation */
+/* Floating Navigation Bar */
 .nav-wrapper {
   position: sticky;
   top: 16px;
@@ -181,7 +181,7 @@ body {
 .btn-dark:hover {
   background-color: var(--pill-dark-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -425,10 +425,9 @@ body {
   background-color: var(--pill-dark);
   color: var(--pill-text);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Location & Meta Bar inside Hero */
 .hero-location-bar {
   display: flex;
   flex-wrap: wrap;
@@ -442,7 +441,7 @@ body {
   margin-top: 12px;
 }
 
-/* Projects Grid */
+/* Projects Section */
 .projects-bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -603,7 +602,7 @@ body {
   font-weight: 700;
 }
 
-/* Skills Matrix */
+/* Skills Section */
 .skills-bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -821,7 +820,7 @@ body {
   font-weight: 600;
 }
 
-/* Responsive Breakpoints */
+/* Responsive Styles */
 @media (max-width: 860px) {
   .hero-bento {
     grid-template-columns: 1fr;
@@ -1052,9 +1051,9 @@ body {
   max-width: 100%;
   max-height: 76vh;
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   object-fit: contain;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .lightbox-caption {
@@ -1064,18 +1063,18 @@ body {
   font-weight: 600;
   text-align: center;
   font-family: var(--font-sans);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 6px 18px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .lightbox-close {
   position: absolute;
   top: 24px;
   right: 28px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   width: 44px;
   height: 44px;
@@ -1089,6 +1088,6 @@ body {
 }
 
 .lightbox-close:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
 }
