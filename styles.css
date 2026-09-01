@@ -35,28 +35,7 @@
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0c0d10;
-    --surface: #15171e;
-    --surface-alt: #1c1e26;
-    --text-primary: #f9fafb;
-    --text-secondary: #e5e7eb;
-    --text-muted: #9ca3af;
-    --border: #262933;
-    --border-strong: #374151;
-    
-    --pill-dark: #f9fafb;
-    --pill-dark-hover: #e5e7eb;
-    --pill-text: #09090b;
 
-    --mint-bg: #27272a;
-    --mint-text: #e4e4e7;
-
-    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.5);
-  }
-}
 
 /* Reset & Base Styles */
 *,
@@ -108,11 +87,7 @@ body {
   transition: var(--transition);
 }
 
-@media (prefers-color-scheme: dark) {
-  .site-nav {
-    background-color: rgba(21, 23, 30, 0.85);
-  }
-}
+
 
 .nav-brand {
   font-weight: 700;
