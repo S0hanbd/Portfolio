@@ -1,11 +1,6 @@
-/* ==========================================================================
-   Sohanur Rahman Sohan — Engineering Portfolio
-   Design System: Cozydiadora Bento UI (Minimalist Soft-Card Aesthetic)
-   ========================================================================== */
+/* Portfolio Stylesheet */
 
-/* --------------------------------------------------------------------------
-   1. Design Tokens & CSS Custom Properties
-   -------------------------------------------------------------------------- */
+/* Design Tokens & CSS Custom Properties */
 :root {
   --bg: #eceef1;
   --surface: #ffffff;
@@ -63,9 +58,7 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   2. Reset & Base Styles
-   -------------------------------------------------------------------------- */
+/* Reset & Base Styles */
 *,
 *::before,
 *::after {
@@ -91,9 +84,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --------------------------------------------------------------------------
-   3. Floating Pill Header / Navigation
-   -------------------------------------------------------------------------- */
+/* Navigation */
 .nav-wrapper {
   position: sticky;
   top: 16px;
@@ -166,9 +157,7 @@ body {
   color: var(--text-primary);
 }
 
-/* --------------------------------------------------------------------------
-   4. Buttons & Badges (Cozydiadora Style)
-   -------------------------------------------------------------------------- */
+/* Buttons & Badges */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -228,9 +217,7 @@ body {
   background-color: currentColor;
 }
 
-/* --------------------------------------------------------------------------
-   5. Container & Section Rhythm
-   -------------------------------------------------------------------------- */
+/* Layout & Containers */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -271,9 +258,7 @@ body {
   color: var(--text-primary);
 }
 
-/* --------------------------------------------------------------------------
-   6. Hero Bento Layout (Matching Cozydiadora Screenshot)
-   -------------------------------------------------------------------------- */
+/* Hero Section */
 .hero-bento {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -457,9 +442,7 @@ body {
   margin-top: 12px;
 }
 
-/* --------------------------------------------------------------------------
-   7. Bento Projects Grid
-   -------------------------------------------------------------------------- */
+/* Projects Grid */
 .projects-bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -538,9 +521,7 @@ body {
   margin-top: auto;
 }
 
-/* --------------------------------------------------------------------------
-   8. Bento Experience Grid
-   -------------------------------------------------------------------------- */
+/* Experience Section */
 .experience-bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
@@ -622,9 +603,7 @@ body {
   font-weight: 700;
 }
 
-/* --------------------------------------------------------------------------
-   9. Bento Skills Matrix
-   -------------------------------------------------------------------------- */
+/* Skills Matrix */
 .skills-bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -666,9 +645,7 @@ body {
   border: 1px solid var(--border);
 }
 
-/* --------------------------------------------------------------------------
-   10. Bento Education & Awards Grids
-   -------------------------------------------------------------------------- */
+/* Education & Awards */
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -794,9 +771,7 @@ body {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   11. Contact CTA Card & Footer
-   -------------------------------------------------------------------------- */
+/* Contact & Footer */
 .contact-bento-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
@@ -846,9 +821,7 @@ body {
   font-weight: 600;
 }
 
-/* --------------------------------------------------------------------------
-   12. Responsive Breakpoints
-   -------------------------------------------------------------------------- */
+/* Responsive Breakpoints */
 @media (max-width: 860px) {
   .hero-bento {
     grid-template-columns: 1fr;
@@ -892,9 +865,7 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------------
-   13. Gallery & Creative Works Layouts (Masonry / Original Ratio)
-   -------------------------------------------------------------------------- */
+/* Gallery & Creative Layouts */
 .gallery-grid {
   column-count: 3;
   column-gap: 20px;
@@ -948,9 +919,7 @@ body {
   transform: scale(1.02);
 }
 
-/* --------------------------------------------------------------------------
-   14. Experience & Achievement Image Cards & Lightbox Modal
-   -------------------------------------------------------------------------- */
+/* Lightbox Modal & Media Cards */
 .exp-card-media,
 .achievement-card-media {
   width: 100%;
