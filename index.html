@@ -7,8 +7,13 @@
   <meta name="description"
     content="Sohanur Rahman Sohan — Computer Science Undergraduate & Youth Leader specializing in Software Engineering, Systems, and Community Impact.">
   <title>Sohanur Rahman Sohan — Software Engineer & Systems Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="DriftWall.css">
+  <link rel="stylesheet" href="FallingText.css">
 </head>
 
 <body>
@@ -41,33 +46,36 @@
     <!-- Hero Section -->
     <section class="hero-bento" id="hero" aria-label="Introduction">
 
-      <!-- Left Hero Card -->
-      <div class="bento-card hero-left-card">
+      <!-- Full Hero 3D Interactive Lanyard Layer -->
+      <div class="lanyard-wrapper hero-lanyard-wrapper"></div>
+
+      <!-- Left Hero Text Background -->
+      <div class="hero-left-text">
         <div class="hero-intro">
           <div>
-            <span class="badge-mint">
+            <span class="badge-mint" style="margin-bottom: 12px;">
               <span class="badge-dot"></span> AVAILABLE FOR WORK
             </span>
           </div>
 
           <h1 class="hero-title">
-
             Hi, I’m <br>Sohanur Rahman
           </h1>
+
 
           <p class="hero-subtitle">
             Computer Science Undergraduate at University of Asia Pacific &amp; Youth Leader focusing on Software
             Engineering, Systems, and Community Impact.
           </p>
 
-          <div>
+          <div style="margin-top: 24px;">
             <a href="mailto:sohanbdtech@gmail.com" class="btn btn-dark">
               Contact Me <i class="fa-solid fa-arrow-right" style="font-size:0.75rem;"></i>
             </a>
           </div>
         </div>
 
-        <div class="hero-location-bar">
+        <div class="hero-location-bar" style="border-top: none; opacity: 0.8;">
           <span><i class="fa-solid fa-location-dot"></i> Tejgaon, Dhaka, Bangladesh</span>
           <span><i class="fa-solid fa-envelope"></i> <a href="mailto:sohanbdtech@gmail.com"
               style="color:inherit; text-decoration:none;">sohanbdtech@gmail.com</a></span>
@@ -76,57 +84,55 @@
         </div>
       </div>
 
-      <!-- Right Column Bento Grid -->
-      <div class="hero-right-grid">
+      <!-- Right Column Bento Grid Space -->
+      <div class="hero-right-grid-image"></div>
 
-        <!-- Creative Gallery Subcard 1 -->
-        <a href="creative.html" class="hero-subcard hero-creative-card" style="text-decoration:none; cursor:pointer;">
-          <h2 class="hero-subcard-title">Creative Gallery 🎨</h2>
-          <p class="hero-subcard-desc">Explore my artwork, digital art, card designs, logos, posters &amp; typography.
-          </p>
-          <span class="badge-mint"
-            style="font-size:0.65rem; padding:3px 8px; align-self:flex-start; background:rgba(255,255,255,0.25); color:#ffffff; border:1px solid rgba(255,255,255,0.3);">Explore
-            Gallery ↗</span>
+    </section>
+
+
+
+    <section class="hero-bottom-cards">
+      <!-- Creative Gallery Subcard 1 -->
+      <a href="creative.html" class="hero-subcard hero-creative-card reveal" style="text-decoration:none; cursor:pointer;">
+        <h2 class="hero-subcard-title">Creative Gallery 🎨</h2>
+        <p class="hero-subcard-desc">Explore my artwork, digital art, card designs, logos, posters &amp; typography.
+        </p>
+        <span class="badge-mint"
+          style="font-size:0.65rem; padding:3px 8px; align-self:flex-start; background:rgba(255,255,255,0.25); color:#ffffff; border:1px solid rgba(255,255,255,0.3);">Explore
+          Gallery ↗</span>
+      </a>
+
+      <!-- Violet Accent Subcard 3 -->
+      <div class="hero-accent-card reveal">
+        <span
+          style="font-size:0.75rem; opacity:0.85; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Academics
+          &amp; Systems</span>
+        <p class="hero-accent-text">B.Sc in Computer Science &amp; Engineering <br><strong>CGPA: 3.93 / 4.00</strong>
+        </p>
+      </div>
+
+      <!-- Social Icons Grid Subcard 4 -->
+      <div class="hero-social-card reveal">
+        <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+          title="GitHub">
+          <i class="fa-brands fa-github"></i>
         </a>
-
-        <!-- Avatar Photo Subcard 2 -->
-        <div class="hero-avatar-card">
-          <img src="images/profile.jpg" alt="Sohanur Rahman Sohan" class="hero-avatar-img">
-        </div>
-
-        <!-- Violet Accent Subcard 3 -->
-        <div class="hero-accent-card">
-          <span
-            style="font-size:0.75rem; opacity:0.85; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Academics
-            &amp; Systems</span>
-          <p class="hero-accent-text">B.Sc in Computer Science &amp; Engineering <br><strong>CGPA: 3.93 / 4.00</strong>
-          </p>
-        </div>
-
-        <!-- Social Icons Grid Subcard 4 -->
-        <div class="hero-social-card">
-          <a href="https://github.com/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-            title="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/sohanur-rahman-6239952b6/" target="_blank" rel="noopener noreferrer"
-            class="social-icon-btn" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://leetcode.com/u/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-            title="LeetCode">
-            <i class="fa-solid fa-code"></i>
-          </a>
-          <a href="https://www.hackerrank.com/profile/Sohanbd" target="_blank" rel="noopener noreferrer"
-            class="social-icon-btn" title="HackerRank">
-            <i class="fa-brands fa-hackerrank"></i>
-          </a>
-          <a href="https://www.facebook.com/sohan.fidato" target="_blank" rel="noopener noreferrer"
-            class="social-icon-btn" title="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-        </div>
-
+        <a href="https://www.linkedin.com/in/sohanur-rahman-6239952b6/" target="_blank" rel="noopener noreferrer"
+          class="social-icon-btn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://leetcode.com/u/S0hanbd" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+          title="LeetCode">
+          <i class="fa-solid fa-code"></i>
+        </a>
+        <a href="https://www.hackerrank.com/profile/Sohanbd" target="_blank" rel="noopener noreferrer"
+          class="social-icon-btn" title="HackerRank">
+          <i class="fa-brands fa-hackerrank"></i>
+        </a>
+        <a href="https://www.facebook.com/sohan.fidato" target="_blank" rel="noopener noreferrer"
+          class="social-icon-btn" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
       </div>
     </section>
 
@@ -378,56 +384,42 @@
         </div>
       </section>
 
-      <!-- Technical Toolkit Section -->
+      <!-- Technical Toolkit Section (1 Large Physics Interactive FallingText Window) -->
       <section id="skills" aria-labelledby="heading-skills">
-        <div class="section-header-card" style="margin-bottom:24px;">
-          <h2 id="heading-skills" class="section-heading">Skills &amp; Capabilities</h2>
+        <div class="section-header-card" style="margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+          <div>
+            <h2 id="heading-skills" class="section-heading">Skills &amp; Capabilities</h2>
+            <p style="color:var(--text-muted); font-size:0.875rem; margin-top:4px;">
+              Hover or click to trigger interactive gravity physics — throw and drag skill pills across the screen.
+            </p>
+          </div>
+          <span class="badge-mint"><i class="fa-solid fa-hand-pointer"></i> Interactive Physics</span>
         </div>
 
-        <div class="skills-bento-grid">
+        <div id="falling-skills-container"></div>
+      </section>
 
-          <div class="skill-bento-card">
-            <h3 class="skill-card-heading">Languages</h3>
-            <div class="skill-pill-cloud">
-              <span class="skill-chip">C</span>
-              <span class="skill-chip">C++</span>
-              <span class="skill-chip">Java</span>
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">HTML5</span>
-              <span class="skill-chip">CSS3</span>
-            </div>
+      <!-- Creative Gallery Section (DriftWall 3D Canvas with Overlay Text & Button) -->
+      <section id="creative-gallery" aria-label="Creative Gallery" style="position: relative;">
+        <div style="height: 600px; width: 100%; position: relative; border-radius: var(--radius-xl); overflow: hidden;">
+          
+          <!-- Top Left Text Overlay -->
+          <div style="position: absolute; top: 28px; left: 28px; z-index: 25; pointer-events: none; max-width: 420px;">
+            <h2 class="section-heading" style="font-size: 2.2rem; color: #ffffff; text-shadow: 0 4px 20px rgba(0,0,0,0.8); margin: 0 0 6px 0;">
+              Creative Gallery 🎨
+            </h2>
+            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin: 0; line-height: 1.5;">
+              Explore traditional artwork, executive card designs, digital vector art, NGO logos, event posters &amp; typography.
+            </p>
           </div>
 
-          <div class="skill-bento-card">
-            <h3 class="skill-card-heading">Core Engineering</h3>
-            <div class="skill-pill-cloud">
-              <span class="skill-chip">Data Structures</span>
-              <span class="skill-chip">Algorithms</span>
-              <span class="skill-chip">OOP</span>
-              <span class="skill-chip">DBMS</span>
-            </div>
-          </div>
+          <!-- Bottom Right Semi-Transparent Visit Studio Button -->
+          <a href="creative.html" class="btn-visit-studio" style="position: absolute; bottom: 28px; right: 28px; z-index: 25;">
+            Visit the Studio <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem; margin-left: 6px;"></i>
+          </a>
 
-          <div class="skill-bento-card">
-            <h3 class="skill-card-heading">Tools &amp; Workflow</h3>
-            <div class="skill-pill-cloud">
-              <span class="skill-chip">Git / GitHub</span>
-              <span class="skill-chip">Notion Workflows</span>
-              <span class="skill-chip">MS Office</span>
-              <span class="skill-chip">UI/UX Design</span>
-            </div>
-          </div>
-
-          <div class="skill-bento-card">
-            <h3 class="skill-card-heading">Leadership</h3>
-            <div class="skill-pill-cloud">
-              <span class="skill-chip">Project Management</span>
-              <span class="skill-chip">Event Marketing</span>
-              <span class="skill-chip">Crisis Logistics</span>
-            </div>
-          </div>
-
+          <!-- 3D DriftWall Canvas -->
+          <div id="creative-drift-wall" style="height: 100%; width: 100%;"></div>
         </div>
       </section>
 
@@ -624,7 +616,15 @@
       }
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="gradient-waves.js"></script>
+  <script src="lanyard.js"></script>
+  <script src="drift-wall.js"></script>
+  <script src="falling-text.js"></script>
+  <script src="animations.js"></script>
 
 </body>
+
 
 </html>

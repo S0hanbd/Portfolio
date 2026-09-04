@@ -1,0 +1,22 @@
+{
+  "name": "sohan-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website for Sohanur Rahman Sohan",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "start": "npx -y serve .",
+    "build": "echo 'Static site ready for deployment'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "software-engineer",
+    "ui-ux",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Sohanur Rahman Sohan",
+  "license": "MIT"
+}

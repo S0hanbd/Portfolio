@@ -1,0 +1,147 @@
+/* DriftWall 3D Infinite Drifting Gallery Component */
+.drift-wall {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: var(--dw-perspective, 1200px);
+  user-select: none;
+  background: var(--dw-overlay, #060010);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+/* Mask top and bottom with soft gradient fade */
+.drift-wall::before,
+.drift-wall::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: var(--dw-edge, 40%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.drift-wall::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--dw-overlay, #060010) 0%, transparent 100%);
+}
+
+.drift-wall::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--dw-overlay, #060010) 0%, transparent 100%);
+}
+
+.drift-wall__plane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: var(--dw-gap, 18px);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: translate(-50%, -50%) scale(1.18);
+}
+
+.drift-wall__col {
+  position: relative;
+  width: var(--dw-tile-w, 200px);
+  transform-style: preserve-3d;
+}
+
+.drift-wall__track {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dw-gap, 18px);
+  will-change: transform;
+}
+
+.drift-wall__tile {
+  position: relative;
+  width: var(--dw-tile-w, 200px);
+  height: var(--dw-tile-h, 132px);
+  border-radius: var(--dw-radius, 14px);
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.drift-wall__tile.is-active,
+.drift-wall__tile:hover {
+  transform: translateZ(var(--dw-lift, 64px)) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+  z-index: 20;
+}
+
+.drift-wall__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--dw-radius, 14px);
+}
+
+.drift-wall__inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(calc(var(--dw-gray, 0) * 100%));
+  transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.drift-wall__tile.is-active img,
+.drift-wall__tile:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.drift-wall__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--dw-overlay, #060010);
+  opacity: var(--dw-dim, 0.55);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.drift-wall__tile.is-active .drift-wall__overlay,
+.drift-wall__tile:hover .drift-wall__overlay {
+  opacity: 0;
+}
+
+/* Semi-transparent 'Visit the Studio' Action Button */
+.btn-visit-studio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-visit-studio:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
