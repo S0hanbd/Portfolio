@@ -42,6 +42,7 @@ uniform bool uEnableMouse;
 uniform vec3 uHorizonColor;
 uniform vec3 uWaveColor;
 uniform vec3 uCrestColor;
+uniform float uIsLight;
 out vec4 fragColor;
 
 const float MAX_DIST = 20000.0;
@@ -107,18 +108,36 @@ void main() {
   vec3 pos = cam + dist * dir;
 
   float t = clamp(uFogDepth / max(dist, 0.001), 0.0, 1.0);
-  vec3 body = mix(uWaveColor, uCrestColor, clamp(pos.z * 0.08 + 0.5, 0.0, 1.0));
-  vec3 col = mix(uHorizonColor, body, t);
-  col *= uBrightness;
+
+  // Dark Palette: Electric indigo/violet into vivid magenta and crisp crest
+  vec3 darkHorizon = uHorizonColor;
+  vec3 darkWave = uWaveColor;
+  vec3 darkCrest = uCrestColor;
+  vec3 darkBody = mix(darkWave, darkCrest, clamp(pos.z * 0.08 + 0.5, 0.0, 1.0));
+  vec3 darkCol = mix(darkHorizon, darkBody, t) * uBrightness;
+
+  // Light Palette: Rich Luminous Aurora silk waves (vibrant royal indigo, vivid rose-magenta, electric sky cyan)
+  vec3 lightHorizon = vec3(0.36, 0.38, 0.96); // Vibrant rich indigo
+  vec3 lightWave = vec3(0.96, 0.26, 0.64);    // Saturated rose-magenta
+  vec3 lightCrest = vec3(0.00, 0.74, 0.94);   // Vivid electric cyan
+  vec3 lightBody = mix(lightWave, lightCrest, clamp(pos.z * 0.08 + 0.5, 0.0, 1.0));
+  vec3 lightCol = mix(lightHorizon, lightBody, t) * 1.25;
+
+  vec3 col = mix(darkCol, lightCol, uIsLight);
   col = clamp(col, 0.0, 1.0);
 
-  float alpha = clamp(t, 0.0, 1.0) * uOpacity;
+  float darkAlpha = clamp(t, 0.0, 1.0) * uOpacity;
   if (uGrain > 0.5) {
     float g = hash21(gl_FragCoord.xy + mod(iTime, 64.0) * 11.0);
-    alpha += (g - 0.5) * uGrainIntensity;
+    darkAlpha += (g - 0.5) * uGrainIntensity;
   }
-  alpha = clamp(alpha, 0.0, 1.0);
-  fragColor = vec4(col * alpha, alpha);
+  darkAlpha = clamp(darkAlpha, 0.0, 1.0);
+
+  // In Light Mode, boost alpha to 0.52 - 0.60 so the waves pop with clear, rich visibility across the bright canvas
+  float lightAlpha = clamp(pow(t, 1.05) * 0.54, 0.0, 0.60);
+
+  float finalAlpha = mix(darkAlpha, lightAlpha, uIsLight);
+  fragColor = vec4(col * finalAlpha, finalAlpha);
 }`;
 
   function initGradientWaves() {
@@ -205,7 +224,8 @@ void main() {
       uEnableMouse: gl.getUniformLocation(program, 'uEnableMouse'),
       uHorizonColor: gl.getUniformLocation(program, 'uHorizonColor'),
       uWaveColor: gl.getUniformLocation(program, 'uWaveColor'),
-      uCrestColor: gl.getUniformLocation(program, 'uCrestColor')
+      uCrestColor: gl.getUniformLocation(program, 'uCrestColor'),
+      uIsLight: gl.getUniformLocation(program, 'uIsLight')
     };
 
     // Set Uniform Values (User Parameters)
@@ -260,11 +280,20 @@ void main() {
     window.addEventListener('resize', resize);
     resize();
 
+    // Theme Transition Tracking (Smooth 0.0 -> 1.0 lerp)
+    const isLightNow = (document.documentElement.getAttribute('data-theme') === 'light' || document.body.getAttribute('data-theme') === 'light');
+    let currentLightVal = isLightNow ? 1.0 : 0.0;
+
     // Render Loop
     const startTime = performance.now();
     function render(currentTime) {
       const elapsed = (currentTime - startTime) * 0.001;
       gl.uniform1f(uLocs.iTime, elapsed);
+
+      // Smoothly morph between Dark Mode and Light Mode shader colors
+      const isLightTarget = (document.documentElement.getAttribute('data-theme') === 'light' || document.body.getAttribute('data-theme') === 'light') ? 1.0 : 0.0;
+      currentLightVal += 0.06 * (isLightTarget - currentLightVal);
+      gl.uniform1f(uLocs.uIsLight, currentLightVal);
 
       // Smooth mouse lerping
       currentMouse[0] += 0.05 * (targetMouse[0] - currentMouse[0]);

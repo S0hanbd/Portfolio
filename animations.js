@@ -45,7 +45,78 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // 4. Light / Dark Theme Switcher with localStorage persistence
+    const initThemeToggle = () => {
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        document.body.setAttribute('data-theme', currentTheme);
 
+        const toggleBtns = document.querySelectorAll('#theme-toggle-btn, .theme-toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const activeTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', activeTheme);
+                document.body.setAttribute('data-theme', activeTheme);
+                localStorage.setItem('theme', activeTheme);
+            });
+        });
+    };
+    initThemeToggle();
+
+    // 4b. Mobile Navigation Drawer Controller
+    const initMobileNav = () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-nav-drawer');
+        if (!menuBtn || !drawer) return;
+
+        const toggleDrawer = (open) => {
+            const isOpen = open !== undefined ? open : !drawer.classList.contains('open');
+            drawer.classList.toggle('open', isOpen);
+            menuBtn.classList.toggle('active', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            if (isOpen) {
+                document.body.classList.add('nav-drawer-open');
+            } else {
+                document.body.classList.remove('nav-drawer-open');
+            }
+        };
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDrawer();
+        });
+
+        // Close when clicking links
+        const mobileLinks = drawer.querySelectorAll('.mobile-nav-link, .mobile-contact-btn');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleDrawer(false);
+            });
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (drawer.classList.contains('open') && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+                toggleDrawer(false);
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && drawer.classList.contains('open')) {
+                toggleDrawer(false);
+            }
+        });
+
+        // Close on viewport resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 860 && drawer.classList.contains('open')) {
+                toggleDrawer(false);
+            }
+        });
+    };
+    initMobileNav();
 
     // 5. ClickSpark Canvas Port
     const canvas = document.createElement('canvas');
@@ -69,7 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    const sparkColor = '#ffffff';
+    const getSparkColor = () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light' || document.body.getAttribute('data-theme') === 'light';
+        return isLight ? '#4f46e5' : '#ffffff';
+    };
+
     const sparkSize = 14;
     const sparkRadius = 25;
     const sparkCount = 7;
@@ -82,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const draw = (timestamp) => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const currentSparkColor = getSparkColor();
 
         sparks = sparks.filter(spark => {
             const elapsed = timestamp - spark.startTime;
@@ -100,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
             const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
 
-            ctx.strokeStyle = sparkColor;
+            ctx.strokeStyle = currentSparkColor;
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(x1, y1);

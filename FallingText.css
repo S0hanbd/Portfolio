@@ -71,3 +71,21 @@
   z-index: 0;
   pointer-events: none;
 }
+
+/* High Contrast Light Mode Overrides for FallingText */
+html[data-theme="light"] .word,
+body[data-theme="light"] .word {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.16);
+  color: #090d16;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  font-weight: 600;
+}
+
+html[data-theme="light"] .word.highlighted,
+body[data-theme="light"] .word.highlighted {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+  border-color: rgba(5, 150, 105, 0.35);
+  font-weight: 700;
+}

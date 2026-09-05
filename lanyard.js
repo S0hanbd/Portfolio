@@ -32,23 +32,23 @@
     container.innerHTML = '';
     container.appendChild(renderer.domElement);
 
-    // 4. Balanced Studio Lighting (Preventing Overexposure)
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+    // 4. Balanced Studio Lighting (Crisp legibility, preventing overexposure)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.9);
-    dirLight1.position.set(6, 12, 8);
+    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.45);
+    dirLight1.position.set(5, 10, 8);
     dirLight1.castShadow = true;
     dirLight1.shadow.mapSize.width = 1024;
     dirLight1.shadow.mapSize.height = 1024;
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0xa5b4fc, 0.4); // Soft rim light
-    dirLight2.position.set(-6, -6, -4);
+    const dirLight2 = new THREE.DirectionalLight(0xa5b4fc, 0.2); // Soft rim light
+    dirLight2.position.set(-5, -5, -4);
     scene.add(dirLight2);
 
-    const pointLight = new THREE.PointLight(0xffffff, 0.3, 50);
-    pointLight.position.set(0, 0, 10);
+    const pointLight = new THREE.PointLight(0xffffff, 0.1, 40);
+    pointLight.position.set(0, 0, 8);
     scene.add(pointLight);
 
 

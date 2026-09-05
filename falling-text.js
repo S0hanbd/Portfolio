@@ -13,15 +13,28 @@
       return;
     }
 
-    const text = options.text || container.dataset.text || '';
-    const highlightWords = options.highlightWords || ['C++', 'Java', 'Python', 'React', 'Algorithms', 'Data Structures', 'Git', 'OOP'];
+    let items = [];
+    if (Array.isArray(options.skills)) {
+      items = options.skills;
+    } else if (Array.isArray(options.words)) {
+      items = options.words;
+    } else {
+      const rawText = options.text || container.dataset.text || '';
+      if (rawText.includes(',')) {
+        items = rawText.split(',').map(s => s.trim()).filter(Boolean);
+      } else {
+        items = rawText.split(' ').map(s => s.trim()).filter(Boolean);
+      }
+    }
+
+    const highlightWords = options.highlightWords || ['C++', 'Java', 'Python', 'Algorithms', 'Data Structures', 'Git', 'OOP', 'UI/UX Design', 'Project Management'];
     const highlightClass = options.highlightClass || 'highlighted';
     const trigger = options.trigger || 'hover';
     const backgroundColor = options.backgroundColor || 'transparent';
     const wireframes = options.wireframes || false;
     const gravity = options.gravity !== undefined ? options.gravity : 0.56;
     const mouseConstraintStiffness = options.mouseConstraintStiffness !== undefined ? options.mouseConstraintStiffness : 0.9;
-    const fontSize = options.fontSize || '1.15rem';
+    const fontSize = options.fontSize || '1.05rem';
 
     container.classList.add('falling-text-container');
 
@@ -37,13 +50,12 @@
     container.appendChild(textTarget);
     container.appendChild(canvasContainer);
 
-    // Format text words into pill spans
-    const words = text.split(' ');
-    const newHTML = words
-      .map(word => {
-        const cleanWord = word.replace(/[^a-zA-Z0-9+/#-]/g, '');
-        const isHighlighted = highlightWords.some(hw => cleanWord.toLowerCase() === hw.toLowerCase() || word.toLowerCase().includes(hw.toLowerCase()));
-        return `<span class="word ${isHighlighted ? highlightClass : ''}">${word}</span>`;
+    // Format skill items into pill spans
+    const newHTML = items
+      .map(item => {
+        const trimmed = item.trim();
+        const isHighlighted = highlightWords.some(hw => hw.toLowerCase() === trimmed.toLowerCase());
+        return `<span class="word ${isHighlighted ? highlightClass : ''}">${trimmed}</span>`;
       })
       .join(' ');
     textTarget.innerHTML = newHTML;
@@ -184,13 +196,18 @@
     const el = document.getElementById('falling-skills-container');
     if (el) {
       initFallingText(el, {
-        text: 'C C++ Java Python SQL HTML5 CSS3 Data Structures Algorithms OOP DBMS Git GitHub Notion Workflows MS Office UI/UX Design Project Management Event Marketing Crisis Logistics',
-        highlightWords: ['C++', 'Java', 'Python', 'Algorithms', 'Data Structures', 'Git', 'OOP', 'UI/UX', 'Project Management'],
+        skills: [
+          'C', 'C++', 'Java', 'Python', 'SQL', 'HTML5', 'CSS3',
+          'Data Structures', 'Algorithms', 'OOP', 'DBMS', 'Git', 'GitHub',
+          'Notion Workflows', 'MS Office', 'UI/UX Design', 'Project Management',
+          'Event Marketing', 'Crisis Logistics'
+        ],
+        highlightWords: ['C++', 'Java', 'Python', 'Algorithms', 'Data Structures', 'Git', 'OOP', 'UI/UX Design', 'Project Management'],
         highlightClass: 'highlighted',
         trigger: 'hover',
         gravity: 0.56,
         mouseConstraintStiffness: 0.9,
-        fontSize: '1.15rem'
+        fontSize: '1.05rem'
       });
     }
   });
