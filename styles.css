@@ -35,6 +35,48 @@
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Light Theme Overrides */
+body[data-theme="light"] {
+  --bg: #f8fafc; /* Crisp Slate 50 */
+  --surface: rgba(255, 255, 255, 0.88); /* Clean white glass card */
+  --surface-alt: rgba(241, 245, 249, 0.95); /* Slate 100 */
+  --text-primary: #0f172a; /* Slate 900 */
+  --text-secondary: #334155; /* Slate 700 */
+  --text-muted: #64748b; /* Slate 500 */
+  --border: rgba(15, 23, 42, 0.12);
+  --border-strong: rgba(15, 23, 42, 0.25);
+  
+  --pill-dark: #0f172a;
+  --pill-dark-hover: #1e293b;
+  --pill-text: #ffffff;
+  
+  --mint-bg: rgba(16, 185, 129, 0.15);
+  --mint-text: #059669; /* Emerald 600 */
+
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --shadow-hover: 0 20px 48px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+body[data-theme="light"] .exp-company {
+  color: #0f172a !important;
+}
+
+body[data-theme="light"] .btn-visit-studio {
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  border-color: rgba(15, 23, 42, 0.3);
+}
+
+body[data-theme="light"] .nav-brand {
+  color: #0f172a;
+}
+
+body[data-theme="light"] .site-nav {
+  background-color: rgba(255, 255, 255, 0.82);
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
 
 
 /* Reset & Base Styles */
@@ -146,6 +188,47 @@ body {
 
 .nav-link:hover {
   color: var(--text-primary);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  outline: none;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--surface);
+  border-color: var(--border-strong);
+  transform: scale(1.08);
+}
+
+.theme-toggle-btn .icon-sun {
+  display: none;
+  color: #f59e0b; /* Warm Amber Sun */
+}
+
+.theme-toggle-btn .icon-moon {
+  display: block;
+  color: #818cf8; /* Soft Indigo Moon */
+}
+
+body[data-theme="light"] .theme-toggle-btn .icon-sun {
+  display: block;
+}
+
+body[data-theme="light"] .theme-toggle-btn .icon-moon {
+  display: none;
 }
 
 /* Buttons & Badges */
