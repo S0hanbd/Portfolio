@@ -562,12 +562,6 @@ body[data-theme="light"] .mobile-nav-link:hover {
 }
 
 
-.hero-title-copyright {
-  font-size: 0.5em;
-  vertical-align: super;
-  font-weight: 400;
-  color: var(--text-muted);
-}
 
 .hero-subtitle {
   font-size: 1.05rem;
@@ -669,21 +663,6 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   line-height: 1.4;
 }
 
-.hero-avatar-card {
-  padding: 0;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-}
-
-.hero-avatar-img {
-  width: 100%;
-  height: 100%;
-  min-height: 180px;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
 
 .hero-accent-card {
   grid-column: span 1;
@@ -922,50 +901,6 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   font-weight: 700;
 }
 
-/* Skills Section */
-.skills-bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.skill-bento-card {
-  background-color: var(--surface);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  box-shadow: var(--shadow-card);
-  transition: var(--transition);
-}
-
-.skill-card-heading {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-}
-
-.skill-pill-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-chip {
-  background-color: var(--surface-alt);
-  color: var(--text-primary);
-  font-size: 0.825rem;
-  font-family: var(--font-mono);
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
-}
 
 /* Education & Awards */
 .edu-grid {
@@ -1198,7 +1133,6 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   }
 
   .projects-bento-grid,
-  .two-col-bento,
   .experience-bento-grid {
     grid-template-columns: 1fr;
   }
@@ -1395,9 +1329,8 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
 }
 
 
-/* Lightbox Modal & Media Cards */
-.exp-card-media,
-.achievement-card-media {
+/* Media Cards */
+.exp-card-media {
   width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -1408,16 +1341,14 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   margin-top: 4px;
 }
 
-.exp-card-img,
-.achievement-card-img {
+.exp-card-img {
   width: 100%;
   height: auto;
   display: block;
   transition: var(--transition);
 }
 
-.exp-card-media:hover .exp-card-img,
-.achievement-card-media:hover .achievement-card-img {
+.exp-card-media:hover .exp-card-img {
   transform: scale(1.03);
 }
 
@@ -1437,59 +1368,8 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   backdrop-filter: blur(2px);
 }
 
-.exp-card-media:hover .media-hover-overlay,
-.achievement-card-media:hover .media-hover-overlay {
+.exp-card-media:hover .media-hover-overlay {
   opacity: 1;
-}
-
-/* Achievements Grid */
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-.achievement-bento-card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  box-shadow: var(--shadow-card);
-  transition: var(--transition);
-}
-
-.achievement-bento-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-}
-
-.achievement-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.achievement-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-}
-
-.achievement-badge {
-  font-size: 0.725rem;
-  font-family: var(--font-mono);
-  background-color: var(--mint-bg);
-  color: var(--mint-text);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 /* Lightbox Modal */
@@ -1581,18 +1461,6 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   transform: translateY(0);
 }
 
-/* 3D Lanyard Showcase Styling */
-.lanyard-container-card {
-  margin-bottom: 24px;
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  padding: 24px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
 .lanyard-wrapper {
   position: relative;

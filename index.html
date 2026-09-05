@@ -696,36 +696,6 @@
     </div>
   </div>
 
-  <script>
-    function openLightbox(src, caption) {
-      const modal = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      const captionText = document.getElementById('lightbox-caption');
-      img.src = src;
-      img.alt = caption;
-      captionText.textContent = caption;
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox(e) {
-      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close') || e.target.tagName === 'BUTTON') {
-        const modal = document.getElementById('lightbox');
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        const modal = document.getElementById('lightbox');
-        if (modal && modal.classList.contains('active')) {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      }
-    });
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
   <script src="gradient-waves.js"></script>

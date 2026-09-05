@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .section-header-card, 
         .project-bento-card, 
         .exp-bento-card, 
-        .skill-bento-card, 
         .edu-bento-card, 
         .award-card, 
         .contact-bento-card,
         .hero-subcard,
-        .hero-avatar-card,
         .hero-accent-card,
         .hero-social-card
     `);
@@ -361,6 +359,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initMasonryGalleries();
+
+    // 7. Lightbox Modal Controller (Consolidated for Certificate & Gallery Previews)
+    window.openLightbox = function (src, caption) {
+        const modal = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        const captionText = document.getElementById('lightbox-caption');
+        if (!modal || !img) return;
+        img.src = src;
+        img.alt = caption || 'Preview';
+        if (captionText) captionText.textContent = caption || '';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = function (e) {
+        if (!e || e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close') || e.target.tagName === 'BUTTON') {
+            const modal = document.getElementById('lightbox');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    };
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('lightbox');
+            if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+
+    // Make all gallery images clickable
+    document.querySelectorAll('.gallery-img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function () {
+            window.openLightbox(this.src, this.alt);
+        });
+    });
 });
 
 

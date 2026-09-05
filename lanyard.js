@@ -341,8 +341,15 @@
 
 
     let lastTime = performance.now();
+    let isVisible = true;
+    let rafId = null;
+
     function animate() {
-      requestAnimationFrame(animate);
+      if (!isVisible) {
+        rafId = null;
+        return;
+      }
+      rafId = requestAnimationFrame(animate);
       const now = performance.now();
       const delta = Math.min((now - lastTime) / 1000, 0.033);
       lastTime = now;
@@ -352,6 +359,16 @@
 
       renderer.render(scene, camera);
     }
+
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (isVisible && !rafId) {
+        lastTime = performance.now();
+        rafId = requestAnimationFrame(animate);
+      }
+    }, { threshold: 0.01 });
+    visibilityObserver.observe(container);
+
     animate();
 
     window.addEventListener('resize', () => {
