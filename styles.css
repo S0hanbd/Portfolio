@@ -84,7 +84,7 @@ body[data-theme="light"] .exp-date-pill {
 }
 
 body[data-theme="light"] .exp-bullet-list li::before {
-  color: #059669;
+  color: var(--text-muted);
 }
 
 body[data-theme="light"] .lanyard-wrapper {
@@ -488,7 +488,7 @@ body[data-theme="light"] .mobile-nav-link:hover {
 .section-header-card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   padding: 6px 4px 18px;
@@ -892,7 +892,7 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   content: "•";
   position: absolute;
   left: 4px;
-  color: #34d399;
+  color: var(--text-muted);
   font-size: 1.2em;
 }
 
@@ -941,11 +941,12 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
 }
 
 .cgpa-pill {
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  background-color: var(--mint-bg);
-  color: var(--mint-text);
+  background-color: var(--surface-alt);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
   padding: 4px 12px;
   border-radius: var(--radius-pill);
   align-self: flex-start;
@@ -1123,8 +1124,8 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   gap: 7px;
   font-family: var(--font-mono);
   font-size: 0.725rem;
-  font-weight: 700;
-  color: var(--mint-text);
+  font-weight: 600;
+  color: var(--text-muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 8px;
@@ -1134,7 +1135,7 @@ body[data-theme="light"] .hero-creative-card .hero-subcard-desc {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: currentColor;
+  background-color: var(--mint-text);
   flex-shrink: 0;
 }
 

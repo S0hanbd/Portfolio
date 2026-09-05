@@ -56,9 +56,9 @@
 }
 
 .highlighted {
-  background: rgba(52, 211, 153, 0.15);
-  color: #34d399;
-  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.28);
   font-weight: 700;
 }
 
@@ -84,8 +84,8 @@ body[data-theme="light"] .word {
 
 html[data-theme="light"] .word.highlighted,
 body[data-theme="light"] .word.highlighted {
-  background: rgba(5, 150, 105, 0.12);
-  color: #047857;
-  border-color: rgba(5, 150, 105, 0.35);
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.28);
   font-weight: 700;
 }
