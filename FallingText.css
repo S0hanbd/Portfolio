@@ -12,7 +12,7 @@
   background-color: var(--surface);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   box-shadow: var(--shadow-card);
   user-select: none;
   display: flex;
@@ -41,11 +41,11 @@
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   background: var(--surface-alt);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
   user-select: none;
   cursor: grab;
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -76,9 +76,9 @@
 html[data-theme="light"] .word,
 body[data-theme="light"] .word {
   background: #ffffff;
-  border-color: rgba(15, 23, 42, 0.16);
+  border: 1.5px solid rgba(15, 23, 42, 0.13);
   color: #090d16;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   font-weight: 600;
 }
 
