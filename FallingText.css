@@ -51,6 +51,10 @@
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 
+.word:hover {
+  border-color: var(--border-hover);
+}
+
 .word:active {
   cursor: grabbing;
 }
